@@ -1,4 +1,8 @@
-.App {
+*{
+  margin: 0;
+}
+
+.app {
   text-align: center;
 }
 
