@@ -77,21 +77,6 @@ const reducer = (state, action) => {
                 basket: updatedDecreaseState
             };
 
-            // case "INCREASE_IN_BASKET" :
-
-            //     const itemIncreasing = state.basket.find( item => item.id === action.id)
-            //     console.log(itemIncreasing);
-            //     const qtyIncreasing = itemIncreasing.quantity
-            //     const itemIncreasingIndex = state.basket.findIndex( item => item.id === action.id)
-            //     const updatedIncreaseState = [...state.basket]
-
-            //     updatedIncreaseState[itemIncreasingIndex].quantity = qtyIncreasing + 1
-
-            //     return{
-            //         ...state,
-            //         basket: updatedIncreaseState
-            //     };
-
         case "SET_USER":
             return {
                 ...state,
