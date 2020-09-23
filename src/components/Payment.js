@@ -16,11 +16,17 @@ function Payment() {
     const stripe = useStripe();
     const elements = useElements();
 
+    const [address, setAddress] = useState('')
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState("");
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState(true);
+
+    useEffect(() => {
+        const location = prompt("Enter your complete address")
+        setAddress(location)
+    },[])
 
     useEffect(() => {
         // generate the special stripe secret which allows us to charge a customer
@@ -87,7 +93,7 @@ function Payment() {
             <div className='payment__container'>
                 <h1>
                     Checkout (
-                        <Link to="/checkout">{basket?.length} items</Link>
+                        <Link to="/checkout">{basket?.length} item</Link>
                         )
                 </h1>
 
@@ -98,9 +104,8 @@ function Payment() {
                         <h3>Delivery Address</h3>
                     </div>
                     <div className='payment__address'>
-                        <p>{user?.email}</p>
-                        <p>123 React Lane</p>
-                        <p>Los Angeles, CA</p>
+                        <p>{ user ? user?.email : <h2>Please login before placing your order</h2>}</p>
+                        <p>{address}</p>
                     </div>
                 </div>
 
@@ -117,6 +122,7 @@ function Payment() {
                                 image={item.image}
                                 price={item.price}
                                 rating={item.rating}
+                                quantity={item.quantity}
                             />
                         ))}
                     </div>
@@ -145,7 +151,7 @@ function Payment() {
                                         thousandSeparator={true}
                                         prefix={"$"}
                                     />
-                                    <button disabled={processing || disabled || succeeded}>
+                                    <button disabled={processing || disabled || succeeded || !user}>
                                         <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                                     </button>
                                 </div>

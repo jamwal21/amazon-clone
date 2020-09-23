@@ -34,30 +34,30 @@ function Home() {
 
         <div className="home__row">
           <Product
-            id="1232134"
+            id="1"
             title="Sky Sports fc Golden State Warriors Curry Jersey Colour Blue Size - S"
-            price={11.96}
+            price={111.96}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/31nJYElF%2BqL.jpg"
           />
          <Product
-            id="123213"
+            id="2"
             title="The Mamba Mentality : Kobe Bryant!!"
-            price={11.96}
+            price={50.96}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/51TngkrkmsL._SX414_BO1,204,203,200_.jpg"
           />
           <Product
-            id="90829332"
+            id="3"
             title="Pandemic P-Jersey plus shooting on SALE"
-            price={-100.00}
-            rating={4}
+            price={0}
+            rating={1}
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfW-lkpQWCCFoIN1znZqvdQBdl5jwuEUsrqQ&usqp=CAU"
           />
           <Product
-            id="12321342"
+            id="4"
             title="The incredible story of Kyrie Irving – one of basketball’s greatest players!"
-            price={11.96}
+            price={30}
             rating={5}
             image="https://m.media-amazon.com/images/I/51MJ0OCl4-L.jpg"
           />
@@ -65,21 +65,21 @@ function Home() {
 
         <div className="home__row">
           <Product
-            id="4903850"
+            id="5"
             title="The Banyan Tee The Vampire Diaries Hoodie Cotton Hoodies"
             price={199.99}
             rating={3}
             image="https://images-na.ssl-images-amazon.com/images/I/41Zr%2BewWmHL._UX679_.jpg"
           />
           <Product
-            id="23445930"
+            id="6"
             title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
             price={98.99}
-            rating={5}
+            rating={2}
             image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
           />
           <Product
-            id="3254354345"
+            id="7"
             title="Akelepan Ki Inteha (Hindi) Paperback – 1 January 2018"
             price={598.99}
             rating={4}
@@ -89,14 +89,14 @@ function Home() {
 
         <div className="home__row">
           <Product
-            id="9082933200"
+            id="8"
             title="The Sun Underground & All The Colors In Between Kindle Edition "
             price={1094.98}
             rating={4}
             image="https://m.media-amazon.com/images/I/51jWLB9NmYL.jpg"
           />
           <Product
-            id="1232134100"
+            id="9"
             title="NBA 2K20 (PS4) : Anthony Davis-Rise of star "
             price={11.96}
             rating={5}

@@ -35,6 +35,10 @@
   background-color: #cd9042;
 }
 
+.header__searchIcon:hover{
+  background-color: #f0c14b;
+}
+
 .header__optionLineOne {
   font-size: 10px;
 }

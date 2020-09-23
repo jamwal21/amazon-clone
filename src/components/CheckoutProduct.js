@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { useStateValue } from '../store/StateProvider';
 import './CheckoutProduct.css'
 
-const CheckoutProduct = forwardRef(({ id, image, title, price, rating, hideButton }, ref) => {
+const CheckoutProduct = forwardRef(({ id, image, title, price, rating, quantity, hideButton }, ref) => {
     const [{ basket }, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
@@ -12,6 +12,14 @@ const CheckoutProduct = forwardRef(({ id, image, title, price, rating, hideButto
             id: id,
         })
     }
+
+    const increaseItem = () =>{
+        //dispatch the item into the data layer
+        dispatch({
+          type:'ADD_TO_BASKET',
+          item: { id }
+        })
+      }
 
     return (
         <div ref={ref} className='checkoutProduct'>
@@ -30,8 +38,15 @@ const CheckoutProduct = forwardRef(({ id, image, title, price, rating, hideButto
                         <p>🌟</p>
                     ))}
                 </div>
+                <div className='checkoutProduct__quantity'>
+                    <span><strong>Quantity :</strong> {quantity}</span>
+                </div>
                 {!hideButton && (
-                    <button onClick={removeFromBasket}>Remove from Basket</button>
+                    <>
+                        <button onClick={increaseItem}>Increase Item</button>
+                        <button onClick={removeFromBasket}>Remove Item</button>
+                    </>
+                        
                 )}
             </div>
         </div>
